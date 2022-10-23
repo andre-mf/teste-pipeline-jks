@@ -7,6 +7,7 @@ pipeline {
                 sh 'docker ps -a'
                 script {
                     dockerapp = docker.build("andremf/knews:${env.BUILD_ID}", "-f ./src/Dockerfile ./src")
+                    dockerapp.push()
                     // dockerapp = docker.build("andremf/knews:${env.BUILD_ID}", "-f kube-news/src/Dockerfile kube-news/src")
                 }
             }
