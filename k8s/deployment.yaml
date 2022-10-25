@@ -51,7 +51,8 @@ spec:
     spec:
       containers:
         - name: web
-          image: andremf/knews:{{TAG}}
+#          image: andremf/knews:{{TAG}}
+          image: andremf/knews:latest
           ports:
             - containerPort: 8080
           env:
